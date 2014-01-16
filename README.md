@@ -1,6 +1,6 @@
 # VMailMgr
 
-Perl-based management tools and supporting library for manipulating [VMailMgr-style](http://vmailmgr.org/) virtual e-mail domains in Qmail.
+Perl-based management tools for manipulating [VMailMgr-style](http://vmailmgr.org/) virtual e-mail domains in Qmail. Provides both a command line tool (`vmailmgr.pl`) and library (`Qmail::VMailMgr`) to facilitate code reuse. To facilitate remote control, interaction with the [TheSchwartz job queue](https://metacpan.org/pod/TheSchwartz) system is planned. 
 
 ## Goals
 
@@ -16,10 +16,9 @@ In short: minimisation of administrator pain for those still administering Qmail
 At the time of writing, the ToDo list is as follows:
 
 1. Transfer code from existing CVS repository
-2. Create .perltidyrc for maintaining uniform style
-3. Finish VmailMgr library functions
-4. Prepare test suite
-5. Import to CPAN
+2. Finish VmailMgr library functions
+3. Prepare test suite
+4. Import to CPAN
 
 ## Installation
 
