@@ -1,4 +1,5 @@
 /.project
+/.includepath
 /Makefile
 /Makefile.old
 /Build
