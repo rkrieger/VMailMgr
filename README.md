@@ -45,7 +45,7 @@ perldoc Qmail::VMailMgr
 perldoc vmailmgr.pl
 ```
 
-Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is available in the [`doc` directory](share/doc/).
+Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is available in the [`doc` directory](doc/).
 
 
 ## Feedback
