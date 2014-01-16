@@ -8,12 +8,19 @@ WriteMakefile
                    'CDB_File' => 0,
                    'Config::INI::Reader' => 0,
                    'File::HomeDir' => 0,
+                   'File::Temp' => 0,
                    'IO::File' => 0,
+                   'Moose' => 0,
+                   'MooseX::Configuration' => 0,
                    'Path::Class' => 0,
+                   'Test::Fatal' => 0,
                    'Test::More' => 0
                  },
   'INSTALLDIRS' => 'site',
   'EXE_FILES' => [],
-  'PL_FILES' => {}
+  'PL_FILES' => {},
+  'test' => {
+              'TESTS' => 't/*.t t/Qmail/*.t t/Qmail/VMailMgr/*.t'
+            }
 )
 ;
