@@ -54,16 +54,22 @@ Qmail::VMailMgr - Utilify functions for C<vmailmg.plr> administration tool.
  # assume zero (shell) exitcode means success
  print $res->{'output'} unless ($res->{'exitcode'});
 
+=head1 METHODS
+
+This module provides several methods.
+
+=head2 version
+X<version>
+
+Returns the version number of this module. No side-effects.
+
+ my $version = Qmail::VMailMgr->version();
+
 =cut
 
-
-# version
-# Returns the version number of this module. No side-effects.
 sub version {
 	return $VERSION;
 }
-
-
 
 
 =pod
