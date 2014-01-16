@@ -6,7 +6,7 @@ use Module::Build;
 my $builder = Module::Build->new(
     module_name       => 'Qmail::VMailMgr',
     dist_name         => 'VMailMgr',
-    license           => 'MIT',
+    license           => 'mit',
     dist_author       => q{Rogier Krieger <rkrieger@cpan.org>},
     dist_version_from => 'lib/Qmail/VMailMgr.pm',
     release_status    => 'stable',
