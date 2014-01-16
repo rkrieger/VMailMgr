@@ -49,7 +49,7 @@ Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is a
 
 ## Build status
 
-[![Build status](https://travis-ci.org/rkrieger/VMailMgr.png?branch=master](https://travis-ci.org/rkrieger/VMailMgr)
+[![Build status](https://travis-ci.org/rkrieger/VMailMgr.png?branch=master)](https://travis-ci.org/rkrieger/VMailMgr)
 
 Pull requests and updates to the repository trigger automatic builds, courtesy of [Travis CI](https://travis-ci.org/).
 
