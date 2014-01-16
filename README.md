@@ -1,4 +1,4 @@
-# VmailMgr
+# VMailMgr
 
 Perl-based management tools and supporting library for manipulating [VMailMgr-style](http://vmailmgr.org/) virtual e-mail domains in Qmail.
 
