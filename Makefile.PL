@@ -10,6 +10,7 @@ WriteMakefile
                    'File::HomeDir' => 0,
                    'File::Temp' => 0,
                    'IO::File' => 0,
+                   'IPC::System::Simple' => 0,
                    'Moose' => 0,
                    'MooseX::Configuration' => 0,
                    'Path::Class' => 0,
