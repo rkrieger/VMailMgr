@@ -50,7 +50,7 @@ TODO: {
     "placeholder date/time"       => qr(Date/time)
   );
 
-  module_boilerplate_ok('lib/Qmail/VmailMgr.pm');
+  module_boilerplate_ok('lib/Qmail/VMailMgr.pm');
 
 
 }
