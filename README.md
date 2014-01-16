@@ -38,13 +38,14 @@ If you encounter errors during the above process, I consider this a bug, so long
 
 ## Documentation
 
-Documentation for the `Qmail::VMailMgr` module is available via the perldoc command. In many cases, the same documentation is also available via `man(1)`.
+Documentation for the `Qmail::VMailMgr` module and command line tools is available via the perldoc command. In many cases, the same documentation is also available via `man(1)`.
 
 ```bash
 perldoc Qmail::VMailMgr
+perldoc vmailmgr.pl
 ```
 
-Supplementary documentation for this package, such as an [FAQ](share/doc/FAQ.md), is available in the [`share/doc` directory](share/doc/).
+Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is available in the [`doc` directory](share/doc/).
 
 
 ## Feedback
