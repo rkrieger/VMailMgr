@@ -47,6 +47,10 @@ perldoc vmailmgr.pl
 Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is available in the [`doc` directory](doc/).
 
 
+## Build status
+
+For the up-to-date build status, please see [Travis CI](https://travis-ci.org/rkrieger/VMailMgr).
+
 ## Feedback
 
 If the code or instructions do not work for you, please let me know! For installation issues, please include the output from the installation procedure. If you can provide tests or patches with your report, so much the better. Please send these via e-mail to <rkrieger@cpan.org>. I promise to answer all such e-mail, even if a complete response may take a week or so if I'm really swamped with work. E-mail containing code, patches or tests will likely come first. 
