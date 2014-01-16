@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
         'Module::Build' => 0,
     },
     build_requires => {
+        'IPC::System::Simple' => 0,
         'Test::More' => 0,
         'Test::Fatal' => 0,
     },
