@@ -7,7 +7,7 @@ use Test::More;
 plan tests => 1;
 
 BEGIN {
-    use_ok( 'Qmail::VMailMgr' ) || print "Bail out!\n";
+    use_ok( 'VMailMgr' ) || print "Bail out!\n";
 }
 
-diag( "Testing Qmail::VMailMgr $Qmail::VMailMgr::VERSION, Perl $], $^X" );
+diag( "Testing VMailMgr $VMailMgr::VERSION, Perl $], $^X" );

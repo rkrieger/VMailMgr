@@ -1,4 +1,4 @@
-package Qmail::VMailMgr;
+package VMailMgr;
 # $Id$
 
 use 5.008;
@@ -11,13 +11,13 @@ our $VERSION	= 0.11;
 
 =head1 NAME
 
-Qmail::VMailMgr - Utilify functions for C<vmailmg.plr> administration tool.
+VMailMgr - Utilify functions for C<vmailmg.plr> administration tool.
 
 =head1 SYNOPSIS
 
- use Qmail::VMailMgr;
+ use VMailMgr;
 
- my $cfg = Qmail::VMailMgr::Config;	# use ~/etc/vmailmgr.ini
+ my $cfg = VMailMgr::Config;	# use ~/etc/vmailmgr.ini
 
  my (%user_for, %domain_for);
  my $vdomaindb = $cfg->{'vdomains'}->{'database'};
@@ -63,7 +63,7 @@ X<version>
 
 Returns the version number of this module. No side-effects.
 
- my $version = Qmail::VMailMgr->version();
+ my $version = VMailMgr->version();
 
 =cut
 
@@ -90,7 +90,7 @@ bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Qmail::VmailMgr
+    perldoc VmailMgr
 
 
 You can also look for information at:
@@ -125,4 +125,4 @@ See the C<LICENSE> file in the root of this distribution.
 
 =cut
 
-1; # End of Qmail::VMailMgr
+1; # End of VMailMgr

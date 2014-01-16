@@ -10,7 +10,7 @@ use File::Basename qw( dirname );
 use File::Slurp qw( read_file );
 use File::Temp qw( tempdir );
 use Path::Class qw( dir file );
-use Qmail::VMailMgr::Config;
+use VMailMgr::Config;
 
 my $dir = tempdir( CLEANUP => 1 );
 
@@ -18,7 +18,7 @@ $ENV{HARNESS_ACTIVE}          = 0;
 $ENV{VMAILMGR_CONFIG_TESTING} = 1;
 
 {
-    my $config = Qmail::VMailMgr::Config->new();
+    my $config = VMailMgr::Config->new();
 
     is_deeply( $config->_raw_config(),
         {}, 'config hash is empty by default' );

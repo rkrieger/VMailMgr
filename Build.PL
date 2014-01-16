@@ -4,11 +4,11 @@ use warnings FATAL => 'all';
 use Module::Build;
 
 my $builder = Module::Build->new(
-    module_name        => 'Qmail::VMailMgr',
+    module_name        => 'VMailMgr',
     dist_name          => 'VMailMgr',
     license            => 'mit',
     dist_author        => q{Rogier Krieger <rkrieger@cpan.org>},
-    dist_version_from  => 'lib/Qmail/VMailMgr.pm',
+    dist_version_from  => 'lib/VMailMgr.pm',
     release_status     => 'stable',
     configure_requires => {
         'Module::Build' => 0,

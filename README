@@ -26,7 +26,7 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc Qmail::VmailMgr
+    perldoc VmailMgr
 
 You can also look for information at:
 

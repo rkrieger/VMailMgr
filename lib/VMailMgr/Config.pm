@@ -1,4 +1,4 @@
-package Qmail::VMailMgr::Config;
+package VMailMgr::Config;
 # $Id$
 
 use strict;
@@ -21,12 +21,12 @@ use MooseX::Configuration;
 
 =head1 NAME
 
-Qmail::VMailMgr::Config - Configuration file handling for Qmail::VMailMgr
+VMailMgr::Config - Configuration file handling for VMailMgr
 
 =head1 SYNOPSIS
 
- use Qmail::VMailMgr::Config;
- my $cfg = Qmail::VMailMgr::Config->instance();
+ use VMailMgr::Config;
+ my $cfg = VMailMgr::Config->instance();
  
  my $dbname = $cfg->database_name;
 
@@ -41,8 +41,8 @@ X<instance>
 Returns an instance of the configuration which can then be used to obtain
 settings for consumption.
 
- use Qmail::VMailMgr::Config;
- my $cfg = Qmail::VMailMgr::Config->instance();
+ use VMailMgr::Config;
+ my $cfg = VMailMgr::Config->instance();
  
  my $dbname = $cfg->database_name;
 
