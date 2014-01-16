@@ -2,6 +2,11 @@
 
 Perl-based management tools for manipulating [VMailMgr-style](http://vmailmgr.org/) virtual e-mail domains in Qmail. Provides both a command line tool (`vmailmgr.pl`) and library (`VMailMgr`) to facilitate code reuse. To facilitate remote control, interaction with the [TheSchwartz job queue](https://metacpan.org/pod/TheSchwartz) system is planned. 
 
+Current status: [![Build status](https://travis-ci.org/rkrieger/VMailMgr.png?branch=master)](https://travis-ci.org/rkrieger/VMailMgr)
+
+Pull requests and updates to the repository trigger automatic builds, courtesy of [Travis CI](https://travis-ci.org/).
+
+
 ## Goals
 
 In short: minimisation of administrator pain for those still administering VmailMgr backends with qmail.
@@ -20,6 +25,7 @@ At the time of writing, the ToDo list is as follows:
 3. Prepare test suite
 4. Import to CPAN
 
+
 ## Installation
 
 Installation should, for a typical CPAN module, be straightforward:
@@ -35,6 +41,7 @@ Alternatively use your [CPAN](http://metacpan.org) or your favourite package man
 
 If you encounter errors during the above process, I consider this a bug, so long as you properly set up your environment (permissions, etc.). I personally find [Perlbrew](http://perlbrew.pl) a very convenient environment to setup.
 
+
 ## Documentation
 
 Documentation for the `VMailMgr` module and command line tools is available via the perldoc command. In many cases, the same documentation is also available via `man(1)`.
@@ -46,12 +53,6 @@ perldoc vmailmgr.pl
 
 Supplementary documentation for this package, such as an [FAQ](doc/FAQ.md), is available in the [`doc` directory](doc/).
 
-
-## Build status
-
-[![Build status](https://travis-ci.org/rkrieger/VMailMgr.png?branch=master)](https://travis-ci.org/rkrieger/VMailMgr)
-
-Pull requests and updates to the repository trigger automatic builds, courtesy of [Travis CI](https://travis-ci.org/).
 
 ## Feedback
 
@@ -72,6 +73,7 @@ By default, perltidy uses the `.perltidyrc` file in the root of this module. It'
 ```bash
 perltidy -b lib/VmailMgr.pm
 ```
+
 
 ### Patches
 
