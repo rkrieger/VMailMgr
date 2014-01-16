@@ -33,7 +33,7 @@ By default, perltidy uses the `.perltidyrc` file in the root of this module. It'
 
 ```bash
 perltidy -b lib/VmailMgr.pm
-``
+```
 
 ### Patches
 
