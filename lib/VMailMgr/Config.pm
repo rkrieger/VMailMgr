@@ -1,13 +1,14 @@
 package VMailMgr::Config;
-# $Id$
 
-use strict;
-use warnings;
+# ABSTRACT: VMailMgr configuration utility
+# $Id$
 
 use strict;
 use warnings;
 use namespace::autoclean;
 use autodie qw( :all );
+
+# VERSION
 
 use File::Spec;
 use File::Temp qw( tempdir );
@@ -15,7 +16,6 @@ use Path::Class;
 
 use Moose;
 use MooseX::Configuration;
-
 
 =pod
 
@@ -49,17 +49,19 @@ settings for consumption.
  
 
 =cut
+
 {
     my $Instance;
 
+    ## no critic 'RequireArgUnpacking'
     sub instance {
-	return $Instance ||= shift->new(@_);
+        return $Instance ||= shift->new(@_);    
     }
+    ## use critic
 
-    sub _clear_instance {
-	undef $Instance;
-    }
+    #    sub _clear_instance {
+    #	undef $Instance;
+    #    }
 }
- 
 
 1;
