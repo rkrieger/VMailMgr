@@ -1,10 +1,20 @@
 language: perl
 notifications:
- email:
-  - secure: "KK7eOIjR1WPBAae7klW67TZZh4ti+bBIPDqlsvzFnYg4x1Kkew0lefWPrfnGU7mrGJDOSe8Pu0PSBCkwuq31al8YRO/clewJ5U1Nm35SSiZO/g30IObY9nffvtsvWXRicW2PIGWbAgR8sRvjiW5tTXClcup5c7rCcbZ5mM2njB8="
+  email:
+    - secure: "KK7eOIjR1WPBAae7klW67TZZh4ti+bBIPDqlsvzFnYg4x1Kkew0lefWPrfnGU7mrGJDOSe8Pu0PSBCkwuq31al8YRO/clewJ5U1Nm35SSiZO/g30IObY9nffvtsvWXRicW2PIGWbAgR8sRvjiW5tTXClcup5c7rCcbZ5mM2njB8="
 perl:
- - "5.16"
- - "5.14"
- - "5.12"
- - "5.10"
- - "5.8"
+    # dev
+    - "5.19"
+    # stable
+    - "5.18"
+    - "5.16"
+    - "5.14"
+    - "5.12"
+    - "5.10"
+    - "5.8"
+install:
+    - cpanm -q --notest Dist::Zilla || (cat /home/travis/.cpanm/build.log; false)
+    - dzil authordeps --missing | cpanm -q --notest || (cat /home/travis/.cpanm/build.log; false)
+    - dzil listdeps --author --missing | cpanm -q --notest || (cat /home/travis/.cpanm/build.log; false)
+script:
+    - dzil test --all
