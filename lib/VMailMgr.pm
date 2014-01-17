@@ -1,11 +1,12 @@
 package VMailMgr;
+# ABSTRACT: Management tools for VMailMgr-style virtual domains with qmail
 # $Id$
 
 use 5.008;
 use strict;
 use warnings FATAL => 'all';
 
-our $VERSION	= 0.11;
+# VERSION
 
 =pod
 
@@ -58,18 +59,7 @@ VMailMgr - Utilify functions for C<vmailmg.plr> administration tool.
 
 This module provides several methods.
 
-=head2 version
-X<version>
-
-Returns the version number of this module. No side-effects.
-
- my $version = VMailMgr->version();
-
 =cut
-
-sub version {
-	return $VERSION;
-}
 
 
 =pod
