@@ -27,15 +27,22 @@ my %module_build_args = (
   "requires" => {
     "CDB_File" => 0,
     "Config::INI::Reader" => 0,
+    "Email::Valid" => 0,
     "File::HomeDir" => 0,
     "File::Temp" => 0,
+    "File::Which" => 0,
     "IO::File" => 0,
+    "List::AllUtils" => "0.07",
     "Moose" => 0,
+    "Moose::Util::TypeConstraints" => 0,
     "MooseX::Configuration" => 0,
-    "Path::Class" => 0
+    "MooseX::Types::Moose" => 0,
+    "Path::Class" => 0,
+    "Sub::Install" => 0
   },
   "script_files" => [],
   "test_requires" => {
+    "IPC::System::Simple" => 0,
     "Test::Exception" => 0,
     "Test::Fatal" => 0,
     "Test::More" => 0,
@@ -45,6 +52,7 @@ my %module_build_args = (
 
 
 my %fallback_build_requires = (
+  "IPC::System::Simple" => 0,
   "Module::Build" => "0.3601",
   "Test::Exception" => 0,
   "Test::Fatal" => 0,
