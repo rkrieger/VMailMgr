@@ -1,5 +1,5 @@
 package VMailMgr;
-# ABSTRACT: Management tools for VMailMgr-style virtual domains with qmail
+
 # $Id$
 
 use 5.008;
@@ -8,7 +8,15 @@ use warnings FATAL => 'all';
 
 # VERSION
 
+1;    # End of VMailMgr
+
+# ABSTRACT: Management tools for VMailMgr-style virtual domains with qmail
+
+__END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -114,5 +122,3 @@ L<http://search.cpan.org/dist/VmailMgr/>
 See the C<LICENSE> file in the root of this distribution.
 
 =cut
-
-1; # End of VMailMgr
