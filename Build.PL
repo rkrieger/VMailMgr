@@ -33,10 +33,13 @@ my %module_build_args = (
     "File::Which" => 0,
     "IO::File" => 0,
     "List::AllUtils" => "0.07",
+    "Mail::Address" => 0,
     "Moose" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::Configuration" => 0,
     "MooseX::Types::Moose" => 0,
+    "Net::DNS" => 0,
+    "Net::Domain::TLD" => 0,
     "Path::Class" => 0,
     "Sub::Install" => 0
   },
