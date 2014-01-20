@@ -2,7 +2,6 @@ package VMailMgr::Config;
 
 # $Id$
 
-use 5.008;
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -10,13 +9,16 @@ use autodie qw( :all );
 
 # VERSION
 
+use Carp;
 use File::Spec;
 use File::Temp qw( tempdir );
+use File::Which qw( which );
 use Path::Class;
 
 use Moose;
 use MooseX::Configuration;
-use VMailMgr::Types qw( Bool NonEmptyStr Str );
+use VMailMgr::Types qw( Bool Dir NonEmptyStr Str );
+use VMailMgr::Util qw( string_is_empty );
 
 has is_production => (
     is      => 'rw',
@@ -50,7 +52,7 @@ has is_production => (
         has $item => (
             is            => 'ro',
             isa           => NonEmptyStr,
-            default       => $item,
+            default       => sub { _vmailmgr_which( $_[0], $item ); },
             section       => 'vmailmgr',
             key           => $item,
             documentation => 'Path to the '
@@ -59,7 +61,64 @@ has is_production => (
         );
     } ## end foreach my $item (@utilities...)
 
+    sub _vmailmgr_which {
+        my $self = shift;
+        my $name = shift;
+
+        my $which = which($name);
+        if ( !$self->is_production )
+        {    # Allow missing executables outside production
+            return defined($which)
+              ? $which
+              : $name;
+        } ## end if ( !$self->is_production...)
+        return $which;
+    } ## end sub _vmailmgr_which
+
 }
+
+has _root_dir => (
+    is      => 'rw',
+    isa     => Dir,
+    lazy    => 1,
+    default => sub {
+        dir(
+            file( $INC{'VMailMgr/Config.pm'} )->dir()->parent()
+              ->parent(),
+            '.r2'
+        )->absolute()->cleanup();
+    },
+    writer => '_set_root_dir',
+);
+
+## no critic 'ProhibitUnusedPrivateSubroutines'
+sub _build_config_file {
+    my $self = shift;
+
+    if ( !string_is_empty( $ENV{VMAILMGR_CONFIG} ) )
+    {
+        croak
+          "Nonexistent config file in VMAILMGR_CONFIG env var: $ENV{VMAILMGR_CONFIG}"
+          unless -f $ENV{VMAILMGR_CONFIG};
+
+        return file( $ENV{VMAILMGR_CONFIG} );
+    } ## end if ( !string_is_empty(...))
+
+    return if $ENV{VMAILMGR_CONFIG_TESTING};
+
+    my @dirs = dir('/etc/vmailmgr');
+    push @dirs, $self->_root_dir()->subdir('etc') if $>;
+
+    for my $dir (@dirs)
+    {
+        my $file = $dir->file('vmailmgr.ini');
+
+        return $file if -f $file;
+    } ## end for my $dir (@dirs)
+
+    return;
+} ## end sub _build_config_file
+## use critic
 
 1;
 
@@ -85,7 +144,9 @@ VMailMgr::Config - Configuration file handling for VMailMgr
 
 =head1 METHODS
 
-This module provides a number of methods.
+This module provides a number of methods for public consumption. Please note
+that only these parts of the interface can be relied upon. Private methods
+are subject to change without prior notice.
 
 =head2 instance
 X<instance>
