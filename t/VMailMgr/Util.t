@@ -18,7 +18,8 @@ require_ok('VMailMgr::Util');
 # string_is_empty
 is( string_is_empty(undef), 1, 'undef yields true' );
 is( string_is_empty(q{}),   1, 'empty string yields true' );
-is( string_is_empty( q{What?}, 0, 'non-empty string yields false' ) )
+is( string_is_empty(q{What?}), 0,
+    'non-empty string yields false' )
   ;
 
 done_testing();
